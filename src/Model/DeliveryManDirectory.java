@@ -5,12 +5,36 @@
  */
 package Model;
 
-import Business.DeliveryMan.*;
+import Model.DeliveryMan.*;
+import java.util.ArrayList;
 
 /**
  *
  * @author harold
  */
 public class DeliveryManDirectory {
+     public  ArrayList<DeliveryMan>  DeliveryManAccountList;
+    
+    
+     public DeliveryManDirectory() {
+     DeliveryManAccountList = new ArrayList<>();
+    }
+
+    public ArrayList<DeliveryMan> getDeliveryManAccountList() {
+        return DeliveryManAccountList;
+    }
+
+    public void setDeliveryManAccountList(ArrayList<DeliveryMan> DeliveryManAccountList) {
+        this.DeliveryManAccountList = DeliveryManAccountList;
+    }
+    
+    public  ArrayList<DeliveryMan> deletByName(String name){
+        for(int i=0 ;i<DeliveryManAccountList.size();i++){
+            if(DeliveryManAccountList.get(i).getName().equals(name)){
+                DeliveryManAccountList.remove(i);
+            }
+        }
+        return DeliveryManAccountList;
+    }
     
 }

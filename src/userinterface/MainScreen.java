@@ -5,9 +5,10 @@
  */
 package userinterface;
 
+import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Organization;
-import Business.UserAccount.UserAccount;
+import Model.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -24,6 +25,7 @@ public class MainScreen extends javax.swing.JPanel {
     UserAccount userAccount;
     Organization organization;
     EcoSystem system;
+    DB4OUtil db = new DB4OUtil();
     public MainScreen(JPanel mainWorkArea,UserAccount userAccount,Organization organization,EcoSystem system) {
         initComponents();
         this.mainWorkArea =  mainWorkArea;
@@ -43,24 +45,10 @@ public class MainScreen extends javax.swing.JPanel {
     private void initComponents() {
 
         workArea = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
         btnLogOut = new javax.swing.JButton();
 
         workArea.setBackground(new java.awt.Color(255, 255, 255));
         workArea.setLayout(new java.awt.CardLayout());
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 821, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 488, Short.MAX_VALUE)
-        );
-
-        workArea.add(jPanel1, "card2");
 
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
@@ -73,22 +61,20 @@ public class MainScreen extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(workArea, javax.swing.GroupLayout.PREFERRED_SIZE, 821, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnLogOut)
-                        .addGap(140, 140, 140))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(workArea, javax.swing.GroupLayout.DEFAULT_SIZE, 895, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnLogOut)
+                .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(13, 13, 13)
+                .addGap(7, 7, 7)
                 .addComponent(btnLogOut)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(workArea, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -99,6 +85,7 @@ public class MainScreen extends javax.swing.JPanel {
          mainWorkArea.remove(this);
         CardLayout layout = (CardLayout) mainWorkArea.getLayout();
         layout.previous(mainWorkArea);
+        
     }//GEN-LAST:event_btnLogOutActionPerformed
     private void initUserWorkArea() {
         
@@ -107,11 +94,11 @@ public class MainScreen extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) workArea.getLayout();
         workArea.add("workArea", userAccount.getRole().createWorkArea(workArea, userAccount,organization, system));
         layout.next(workArea);
+        db.storeSystem(system);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogOut;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables
 }

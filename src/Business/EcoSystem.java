@@ -9,14 +9,15 @@ package Business;
 import Model.CustomerDirectory;
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
-import Business.UserAccount.UserAccountDirectory;
+import Model.UserAccountDirectory;
 import Model.DeliveryManDirectory;
 import Model.RestaurantDirectory;
 import java.util.ArrayList;
+import Business.*;
 
 /**
  *
- * @author MyPC1
+ * @author chen.wei
  */
 public class EcoSystem extends Organization{
     
@@ -50,11 +51,28 @@ public class EcoSystem extends Organization{
     private EcoSystem(){
        // super(null);
         organizationDirectory = new OrganizationDirectory();
+        restaurantDirectory = new RestaurantDirectory();
+        customerDirectory = new CustomerDirectory();
+        deliveryManDirectory = new DeliveryManDirectory();
+        userAccountDirectory = new UserAccountDirectory();
        // networkList=new ArrayList<Network>();
     }
     public UserAccountDirectory getUserAccountDirectory() {
         return userAccountDirectory;
     }
+
+    public RestaurantDirectory getRestaurantDirectory() {
+        return restaurantDirectory;
+    }
+
+    public CustomerDirectory getCustomerDirectory() {
+        return customerDirectory;
+    }
+
+    public DeliveryManDirectory getDeliveryManDirectory() {
+        return deliveryManDirectory;
+    }
+    
     public OrganizationDirectory getOrganizationDirectory() {
         return organizationDirectory;
     }

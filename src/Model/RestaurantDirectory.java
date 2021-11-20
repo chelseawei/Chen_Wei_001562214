@@ -5,12 +5,49 @@
  */
 package Model;
 
-import Business.Restaurant.*;
+import Model.Restaurant.*;
+import java.util.ArrayList;
 
 /**
  *
  * @author harold
  */
 public class RestaurantDirectory {
+    public  ArrayList< Restaurant>  restaurantAccountList;
+
+    public RestaurantDirectory() {
+        restaurantAccountList = new ArrayList<>();
+    }
+
+    public ArrayList<Restaurant> getRestaurantAccountList() {
+        return restaurantAccountList;
+    }
+
+    public void setRestaurantAccountList(ArrayList<Restaurant> restaurantAccountList) {
+        this.restaurantAccountList = restaurantAccountList;
+    }
+       
+       
+       
+       
+        public  ArrayList<Restaurant> deletByName(String name){
+            for(Restaurant r : restaurantAccountList ){
+                if(r.getName().equals(name)){
+                    restaurantAccountList.remove(r);
+                    break;
+                }
+            }
+        return restaurantAccountList;
+    }
+        
+        
+        public Restaurant FindByName(String name){
+            for(Restaurant r : restaurantAccountList) {
+                if(r.getName().equals(name)){
+                    return r;
+            }
+            }
+            return null;
+}
     
 }

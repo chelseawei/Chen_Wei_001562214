@@ -4,8 +4,8 @@
  */
 package Model;
 
-import Business.UserAccount.*;
-import Business.Employee.Employee;
+
+
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -15,10 +15,11 @@ import java.util.ArrayList;
  */
 public class UserAccountDirectory {
     
+    //private ArrayList<UserAccount> userAccountList;
     private ArrayList<UserAccount> userAccountList;
 
     public UserAccountDirectory() {
-        userAccountList = new ArrayList();
+        userAccountList = new ArrayList<>();
     }
 
     public ArrayList<UserAccount> getUserAccountList() {

@@ -16,5 +16,27 @@ public class CustomerDirectory {
     public CustomerDirectory(){
         customerList = new ArrayList<>();
     }
+
+    public ArrayList<Customer> getCustomerList() {
+        return customerList;
+    }
+
+    public void setCustomerList(ArrayList<Customer> customerList) {
+        this.customerList = customerList;
+    }
+     
+
+    
+    
+    
+    
+     public  ArrayList<Customer> deletByName(String name){
+        for(int i=0 ;i<customerList.size();i++){
+            if(customerList.get(i).getUsername().equals(name)){
+                customerList.remove(i);
+            }
+        }
+        return customerList;
+    }
     
 }

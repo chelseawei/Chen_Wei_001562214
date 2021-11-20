@@ -7,7 +7,7 @@ package Business.Role;
 
 import Business.EcoSystem;
 import Business.Organization;
-import Business.UserAccount.UserAccount;
+import  Model.UserAccount;
 import javax.swing.JPanel;
 import userinterface.DeliveryManRole.DeliveryManWorkAreaJPanel;
 
