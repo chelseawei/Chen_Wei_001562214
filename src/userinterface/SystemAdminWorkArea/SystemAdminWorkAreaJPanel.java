@@ -36,7 +36,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         this.userProcessContainer=userProcessContainer;
         this.ecosystem=ecosystem;
         
-        //populateTree();
+        
     }
     
     

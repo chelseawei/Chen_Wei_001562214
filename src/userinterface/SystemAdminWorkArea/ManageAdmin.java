@@ -106,9 +106,9 @@ public class ManageAdmin extends javax.swing.JPanel {
             }
         });
 
-        lbName.setText("userName:");
+        lbName.setText("UserName:");
 
-        lbPassword.setText("userPassword:");
+        lbPassword.setText("UserPassword:");
 
         lbTitle.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         lbTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -126,21 +126,21 @@ public class ManageAdmin extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(61, Short.MAX_VALUE)
+                .addContainerGap(54, Short.MAX_VALUE)
                 .addComponent(lbName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lbPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
                 .addComponent(btnCreateCustomer)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnUpdateCustomer)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnDeleteCustomer)
-                .addGap(107, 107, 107))
+                .addGap(79, 79, 79))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

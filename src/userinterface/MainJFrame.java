@@ -23,9 +23,7 @@ public class MainJFrame extends javax.swing.JFrame {
     
     public MainJFrame() {
         initComponents();
-        //system = ConfigureASystem.configure();
         setSize(800, 600);
-
         initLoginScreen();
     }
 
@@ -104,7 +102,7 @@ public class MainJFrame extends javax.swing.JFrame {
         mainWorkArea.add("LoginJPanel", loginScreen);
         CardLayout layout = (CardLayout) mainWorkArea.getLayout();
         layout.next(mainWorkArea);
-        //System.out.println(system.getOrganizationDirectory().getOrganizationList());
+        
 
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables

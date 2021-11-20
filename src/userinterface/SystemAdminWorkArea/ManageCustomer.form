@@ -18,58 +18,64 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbTitle" alignment="1" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lbTitle" max="32767" attributes="0"/>
+                  </Group>
                   <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="lbName" min="-2" pref="83" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txtName" min="-2" pref="67" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="lbPassword" min="-2" pref="104" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txtPassword" min="-2" pref="55" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnCreateCustomer" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnUpdateCustomer" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnDeleteCustomer" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="lbName" pref="71" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="txtName" pref="79" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="lbPassword" pref="104" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="txtPassword" pref="73" max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnCreateCustomer" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="btnUpdateCustomer" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="btnDeleteCustomer" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="614" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="614" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="65" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="lbTitle" min="-2" pref="25" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnBack" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="22" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lbTitle" min="-2" pref="25" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="182" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnCreateCustomer" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnUpdateCustomer" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnDeleteCustomer" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbPassword" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtPassword" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -140,14 +146,14 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbName">
       <Properties>
-        <Property name="text" type="java.lang.String" value="userName:"/>
+        <Property name="text" type="java.lang.String" value="UserName:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtName">
     </Component>
     <Component class="javax.swing.JLabel" name="lbPassword">
       <Properties>
-        <Property name="text" type="java.lang.String" value="userPassword:"/>
+        <Property name="text" type="java.lang.String" value="UserPassword:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtPassword">

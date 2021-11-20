@@ -25,12 +25,9 @@ public class LoginJPanel extends javax.swing.JPanel {
      */
     private EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    //private JPanel mainWorkArea;
-    //private JPanel container;
-
+   
     public LoginJPanel(JPanel container) {
         initComponents();
-       // this.system = system;
         system = dB4OUtil.retrieveSystem();
         this.setSize(800, 600);
     }
@@ -135,16 +132,11 @@ public class LoginJPanel extends javax.swing.JPanel {
        // Get user name
         String userName = userNameJTextField.getText();
         String userPassword = passwordField.getText();
-        //if(userName.equals("admin") && userPassword.equals("admin")){
         boolean flag = false;
-
         UserAccount userAccount = null;
-        //System.out.println(system.getRestaurantDirectory().getRestaurantAccountList().get(0).getName());
         for (Organization organization : system.getOrganizationDirectory().getOrganizationList()){
             userAccount = organization.getUserAccountDirectory().authenticateUser(userName, userPassword);
-           
             if (userAccount != null){
-                //System.out.println(userAccount.getUsername());
                 MainScreen mainScreen = new MainScreen(container, userAccount, organization, system);
                 container.add("MainScreen", mainScreen);
                 CardLayout layout = (CardLayout) container.getLayout();

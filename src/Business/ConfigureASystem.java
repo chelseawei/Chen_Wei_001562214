@@ -53,7 +53,7 @@ public class ConfigureASystem {
         Restaurant r = new Restaurant("restaurant");
         system.getRestaurantDirectory().getRestaurantAccountList().add(r);
         
-        System.out.println(system.getRestaurantDirectory().getRestaurantAccountList().get(0));
+       
         
         UserAccount account3 = new UserAccount();
         account3.setUsername("deliver1");
@@ -61,6 +61,7 @@ public class ConfigureASystem {
         account3.setRole(new DeliverManRole());
         DeliveryMan d = new DeliveryMan("deliver1");
         system.getDeliveryManDirectory().getDeliveryManAccountList().add(d);
+        
         UserAccount account4 = new UserAccount();
         account4.setUsername("customer1");
         account4.setPassword("customer1");
@@ -81,12 +82,10 @@ public class ConfigureASystem {
         system.getRestaurantDirectory().getRestaurantAccountList().get(0).getMenuList().add(menu2);
         system.getRestaurantDirectory().getRestaurantAccountList().get(0).getMenuList().add(menu3);
         system.getRestaurantDirectory().getRestaurantAccountList().get(0).getMenuList().add(menu4);
-        System.out.println(system.getRestaurantDirectory().getRestaurantAccountList().get(0).getMenuList());
-        System.out.println(system.getOrganizationDirectory().getOrganizationList());
+       
         db.storeSystem(system);
-      // System.out.println("22772");
-       //System.out.println(adminOrganization.getUserAccountDirectory().getUserAccountList());
-       return system;
+      
+        return system;
     }
     
 }
