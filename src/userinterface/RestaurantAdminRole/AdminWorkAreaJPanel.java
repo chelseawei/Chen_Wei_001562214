@@ -24,7 +24,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;
         this.system = system;
-      
+        txtTitle.setText(userAccount.getUsername());
         //valueLabel.setText();
     }
     
@@ -39,12 +39,13 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnMenu = new javax.swing.JButton();
         btnOrder = new javax.swing.JButton();
+        txtTitle = new javax.swing.JTextField();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Restautant");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, -1));
+        jLabel1.setText("Welcome");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, -1, -1));
 
         btnMenu.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         btnMenu.setText("Manage Menu");
@@ -63,6 +64,9 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 180, 50));
+
+        txtTitle.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        add(txtTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 26, 170, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
@@ -84,6 +88,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnMenu;
     private javax.swing.JButton btnOrder;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField txtTitle;
     // End of variables declaration//GEN-END:variables
     
 }

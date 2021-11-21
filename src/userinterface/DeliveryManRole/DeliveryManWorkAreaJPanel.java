@@ -36,7 +36,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         this.userAccount = account;
         this.system = system;
       
-        
+        txtTitle.setText(userAccount.getUsername());
         populateTable();
     }
     
@@ -80,6 +80,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         table1 = new javax.swing.JTable();
         lbTitle = new javax.swing.JLabel();
+        txtTitle = new javax.swing.JTextField();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -120,8 +121,9 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
 
         lbTitle.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         lbTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbTitle.setText("DeliveryMan");
-        add(lbTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 660, -1));
+        lbTitle.setText("Welcome");
+        add(lbTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 130, -1));
+        add(txtTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 130, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
@@ -156,5 +158,6 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lbTitle;
     private javax.swing.JButton refreshJButton;
     private javax.swing.JTable table1;
+    private javax.swing.JTextField txtTitle;
     // End of variables declaration//GEN-END:variables
 }
