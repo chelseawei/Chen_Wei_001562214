@@ -84,6 +84,7 @@ public class CustomerOrderJPanel extends javax.swing.JPanel {
             }
         });
 
+        table1.setBackground(new java.awt.Color(153, 153, 255));
         table1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},

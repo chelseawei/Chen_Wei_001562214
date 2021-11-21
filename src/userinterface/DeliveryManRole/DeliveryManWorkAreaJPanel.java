@@ -99,6 +99,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 60, -1, -1));
 
+        table1.setBackground(new java.awt.Color(153, 255, 153));
         table1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -111,6 +112,9 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
             }
         ));
         jScrollPane1.setViewportView(table1);
+        if (table1.getColumnModel().getColumnCount() > 0) {
+            table1.getColumnModel().getColumn(4).setMinWidth(40);
+        }
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, -1, 190));
 

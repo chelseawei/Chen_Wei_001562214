@@ -54,6 +54,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         btnSure = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
+        table1.setBackground(new java.awt.Color(153, 204, 255));
         table1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -66,6 +67,9 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
             }
         ));
         jScrollPane1.setViewportView(table1);
+        if (table1.getColumnModel().getColumnCount() > 0) {
+            table1.getColumnModel().getColumn(4).setMinWidth(40);
+        }
 
         lbTitle.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         lbTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

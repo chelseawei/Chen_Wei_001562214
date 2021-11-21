@@ -60,6 +60,7 @@ public class ManageMenuJPanel extends javax.swing.JPanel {
         lbTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbTitle.setText("Menu");
 
+        table1.setBackground(new java.awt.Color(153, 204, 255));
         table1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
